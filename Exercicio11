@@ -1,0 +1,39 @@
+//Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais uma comissão 
+//também fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas. 
+//Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, 
+//o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva o salário final do vendedor. 
+
+
+
+package ExercicioFacct;
+
+import java.util.Scanner;
+
+public class Exercicio11 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Digite o valor do seu salario fixo por mes: R$");
+		float salarioFixo=sc.nextFloat();
+		System.out.print("Digite o valor da sua comissao que recebe por cada carro vendido:");
+		float comissaoFixa=sc.nextFloat();
+		System.out.print("Digite a quantidade de carros vendidos por mes:");
+		float quantidadeCarros=sc.nextFloat();
+		System.out.print("Digite o valor total vendido no mes:");
+		float valorTotal=sc.nextFloat();
+		float totalComissao=quantidadeCarros*comissaoFixa;
+		float porcentagemValor=valorTotal*5/100;
+		float valorFinal=salarioFixo+totalComissao+porcentagemValor;
+		System.out.print("O valor final do salario corresponde a: R$ " +valorFinal);
+		sc.close();
+		
+	}
+		
+}
+		
+
+		
+
+
